@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Bock Automotive</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  </section>
+
+  <!-- Scripts -->wind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Orbitron', 'monospace'],
+          },
+          colors: {
+            primary: '#050816',
+            secondary: '#ed1f27',
+            light: '#ffffff',
+            'space-navy': '#0a0a23',
+            'electric-blue': '#00d4ff',
+            'bock-purple': '#8b5cf6',
+            'bock-orange': '#ff6b35',
+            'bock-neural': '#10b981',
+            'bock-green': '#22c55e',
+            'bock-indigo': '#6366f1',
+            'bock-automotive': '#ed1f27',
+            'bock-foods': '#77c149',
+            'bock-space': '#4757a6',
+            'bock-ai': '#4757a6',
+            'bock-health': '#fdc03b',
+            'bock-chain': '#873a87'
+          },
+          keyframes: {
+            float: {
+              '0%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+              '100%': { transform: 'translateY(0)' }
+            },
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            tiltIn: {
+              '0%': { opacity: 0, transform: 'translateY(20px) rotate(-2deg)' },
+              '100%': { opacity: 1, transform: 'translateY(0) rotate(0)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' }
+            },
+            spinSlow: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' }
+            },
+            gradientShift: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' }
+            },
+            glowPulse: {
+              '0%,100%': { boxShadow: '0 0 0 rgba(237,31,39,0)' },
+              '50%': { boxShadow: '0 0 35px rgba(237,31,39,0.45)' }
+            }
+          },
+          animation: {
+            float: 'float 4s ease-in-out infinite',
+            fadeUp: 'fadeUp 800ms ease forwards',
+            fadeIn: 'fadeIn 1000ms ease forwards',
+            tiltIn: 'tiltIn 700ms ease forwards',
+            shimmer: 'shimmer 2s linear infinite',
+            spinSlow: 'spinSlow 15s linear infinite',
+            gradientShift: 'gradientShift 12s ease infinite',
+            glowPulse: 'glowPulse 2.5s ease-in-out infinite'
+          },
+          boxShadow: { neon: '0 0 30px rgba(72,171,224,0.5)' }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Resources -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="image/logos/Automative.svg" />
+  <link rel="icon" type="image/x-icon" href="image/logos/Automative.svg" />
+  <link rel="apple-touch-icon" href="image/logos/Automative.svg" />
+  <meta name="theme-color" content="#ed1f27" />
+
+  <!-- Custom Styles -->
+  <style>
+    /* Global overflow prevention */
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Prevent wide elements from causing horizontal scroll */
+    img,
+    video,
+    iframe,
+    embed,
+    object {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Hide scrollbars */
+    html {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
+    }
+
+    html::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+      /* WebKit */
+    }
+
+    body {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 640px) {
+
+      /* Navigation improvements for mobile */
+      nav {
+        min-height: 60px;
+        background: rgba(0, 0, 0, 0.98) !important;
+        backdrop-filter: blur(20px);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 32px !important;
+        height: 32px !important;
+        margin-top: -16px !important;
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 14px !important;
+      }
+
+      .swiper-pagination-bullet {
+        width: 8px !important;
+        height: 8px !important;
+      }
+    }
+
+    /* Ensure navigation is always visible */
+    nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* Mobile menu improvements */
+    @media (max-width: 1023px) {
+      #nav-mobile-menu {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Fix mobile viewport overflow */
+      body {
+        overflow-x: hidden !important;
+      }
+
+      * {
+        max-width: 100vw;
+        box-sizing: border-box;
+      }
+
+      .parallax-item {
+        transform: none !important;
+      }
+
+      /* Ensure all containers stay within viewport */
+      .max-w-7xl,
+      .container,
+      section,
+      div {
+        max-width: 100vw !important;
+      }
+    }
+
+    /* Gallery responsive improvements */
+    .gallery-card {
+      touch-action: manipulation;
+    }
+
+    /* Better touch targets for mobile */
+    @media (max-width: 768px) {
+      .product-card {
+        touch-action: manipulation;
+      }
+
+      button,
+      a {
+        min-height: 44px;
+        min-width: 44px;
+      }
+
+      /* Footer mobile optimization */
+      footer .grid {
+        gap: 1.5rem !important;
+      }
+
+      footer .space-y-3>*+* {
+        margin-top: 0.5rem !important;
+      }
+
+      footer .space-y-4>*+* {
+        margin-top: 0.75rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="min-h-screen bg-primary text-light antialiased selection:bg-secondary/30 relative overflow-x-hidden font-sans"
+  style="width: 100%; max-width: 100vw;">
+
+  <!-- Background Elements -->
+  <div aria-hidden="true"
+    class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,#000000,30%,#0a0a0a,70%,#140000)] bg-[length:200%_200%] animate-gradientShift">
+  </div>
+  <div aria-hidden="true"
+    class="parallax-item pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-red-600/20 blur-3xl animate-pulse"
+    data-depth="0.02"></div>
+  <div aria-hidden="true"
+    class="parallax-item pointer-events-none absolute top-1/3 right-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl animate-[float_8s_ease-in-out_infinite]"
+    data-depth="0.03"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-red-600/30 shadow-lg">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
+      <div class="flex items-center justify-between h-12 sm:h-14 lg:h-16">
+        <!-- Logo and Title -->
+        <div class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+          <div class="relative flex-shrink-0">
+            <img src="assets/Automative.svg" alt="Bock Automotive"
+              class="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 filter drop-shadow-lg">
+            <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full opacity-30 blur-sm">
+            </div>
+          </div>
+          <span class="text-sm sm:text-base lg:text-xl font-bold text-white truncate">Bock Automotive</span>
+        </div>
+
+        <!-- Hamburger for mobile -->
+        <button id="nav-toggle"
+          class="lg:hidden flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-white focus:outline-none rounded-lg hover:bg-red-600/20 transition-all duration-200 border border-red-600/20"
+          aria-label="Toggle menu">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop Nav -->
+        <div id="nav-menu" class="hidden lg:flex flex-row items-center gap-4 lg:gap-6">
+          <a href="#products"
+            class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium px-3 py-2 rounded-lg hover:bg-red-600/10">Products</a>
+          <a href="#work"
+            class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium px-3 py-2 rounded-lg hover:bg-red-600/10">Work
+            at Bock</a>
+          <a href="https://bockbharath.com/"
+            class="bg-gradient-to-r from-red-600 to-red-500 px-4 py-2 rounded-lg text-white text-sm font-medium hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300 hover:from-red-500 hover:to-red-400">Back
+            to Bock</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="nav-backdrop"
+      class="fixed inset-0 bg-black/60 z-40 hidden transition-opacity duration-300 lg:hidden backdrop-blur-sm"></div>
+    <div id="nav-mobile-menu"
+      class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-red-600/30 shadow-2xl px-4 sm:px-6 py-4 sm:py-6 flex flex-col gap-2 sm:gap-3 items-stretch w-full transition-transform duration-300 -translate-y-full lg:hidden">
+      <!-- Mobile menu header -->
+      <div class="flex items-center justify-between pb-3 border-b border-red-600/20">
+        <span class="text-lg font-bold text-white">Menu</span>
+        <button id="nav-close"
+          class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-red-600/20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <a href="#products"
+        class="block w-full text-left text-gray-300 hover:text-white hover:bg-red-600/10 transition-all duration-200 text-base font-medium py-3 px-4 rounded-lg border border-transparent hover:border-red-600/20">Products</a>
+      <a href="#work"
+        class="block w-full text-left text-gray-300 hover:text-white hover:bg-red-600/10 transition-all duration-200 text-base font-medium py-3 px-4 rounded-lg border border-transparent hover:border-red-600/20">Work
+        at Bock</a>
+      <a href="https://bockbharath.com/"
+        class="block w-full text-center bg-gradient-to-r from-red-600 to-red-500 px-4 py-3 rounded-lg text-white text-base font-medium hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300 mt-2">Back
+        to Bock</a>
+    </div>
+  </nav>
+  <script>
+    // Mobile nav toggle with backdrop and smooth transition
+    document.addEventListener('DOMContentLoaded', function () {
+      var navToggle = document.getElementById('nav-toggle');
+      var navClose = document.getElementById('nav-close');
+      var navMenu = document.getElementById('nav-menu');
+      var navMobileMenu = document.getElementById('nav-mobile-menu');
+      var navBackdrop = document.getElementById('nav-backdrop');
+
+      function openMenu() {
+        navMobileMenu.classList.remove('-translate-y-full');
+        navMobileMenu.classList.add('translate-y-0');
+        navBackdrop.classList.remove('hidden');
+        navBackdrop.classList.add('opacity-100');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function closeMenu() {
+        navMobileMenu.classList.add('-translate-y-full');
+        navMobileMenu.classList.remove('translate-y-0');
+        navBackdrop.classList.add('hidden');
+        navBackdrop.classList.remove('opacity-100');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      // Toggle menu
+      if (navToggle) {
+        navToggle.addEventListener('click', function () {
+          if (navMobileMenu.classList.contains('-translate-y-full')) {
+            openMenu();
+          } else {
+            closeMenu();
+          }
+        });
+      }
+
+      // Close button
+      if (navClose) {
+        navClose.addEventListener('click', closeMenu);
+      }
+
+      // Click backdrop to close
+      if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMenu);
+      }
+
+      // Close menu on link click
+      var mobileMenuLinks = navMobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          // Add small delay to allow navigation to start
+          setTimeout(closeMenu, 100);
+        });
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024) { // lg breakpoint
+          closeMenu();
+        }
+      });
+    });
+  </script> <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center pt-16 sm:pt-20 lg:pt-24 overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-black to-primary-dark"></div>
+      <div
+        class="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-red-600/10 rounded-full blur-3xl">
+      </div>
+      <div
+        class="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-red-500/10 rounded-full blur-3xl">
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 sm:w-[600px] h-80 sm:h-[600px] bg-red-400/5 rounded-full blur-3xl">
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <!-- Content -->
+        <div class="text-center lg:text-left order-2 lg:order-1">
+          <div class="mb-6 sm:mb-8">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              Bock
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">
+                Automotive
+              </span>
+            </h1>
+            <h2 class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 font-light">
+              Transportation for all!
+            </h2>
+          </div>
+
+          <p
+            class="text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
+            Bock Automotive focuses on Sustainable Energy Transport, we see that there are more problems like
+            pollution/depletion of fossil fuels by the usage of IC Engine vehicles. To solve that issue, EVs were
+            introduced. They did not solve the problems yet, the pollution caused by manufacturing a battery is
+            equivalent to the pollution caused by an IC engine vehicle. Also, the Na/K ion reserves are very limited.
+            The charging infrastructure is not yet built across the world and electricity demands due to EVs may
+            drastically increase in the future. </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
+            <a href="Copy of Bock Company Handbook (Version 1.3).pdf" download
+              class="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-1">
+              <span class="relative z-10 text-sm sm:text-base">Company Handbook</span>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300">
+              </div>
+            </a>
+            <a href="#work"
+              class="px-6 sm:px-8 py-3 sm:py-4 border border-red-600/40 text-white font-semibold rounded-xl hover:bg-red-600/10 transition-all duration-300 text-sm sm:text-base">
+              View Timeline
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex justify-center lg:justify-start gap-3 sm:gap-4">
+            <a href="https://www.instagram.com/bockautomtivebharath"
+              class="w-10 h-10 sm:w-12 sm:h-12 bg-primary-dark/50 border border-red-600/30 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-red-600 transition-all duration-300">
+              <i class="ri-instagram-line text-lg sm:text-xl"></i>
+            </a>
+            <a href="https://twitter.com/bockAutoBH"
+              class="w-10 h-10 sm:w-12 sm:h-12 bg-primary-dark/50 border border-red-600/30 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-red-600 transition-all duration-300">
+              <i class="ri-twitter-fill text-lg sm:text-xl"></i>
+            </a>
+            <a href="https://www.youtube.com/@bockautomotivebharath"
+              class="w-10 h-10 sm:w-12 sm:h-12 bg-primary-dark/50 border border-red-600/30 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-red-600 transition-all duration-300">
+              <i class="ri-youtube-fill text-lg sm:text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Car Visual -->
+        <div class="relative flex justify-center lg:justify-end order-1 lg:order-2">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-400/20 rounded-full blur-3xl scale-150">
+            </div>
+            <img src="assets/automotive_middle.png" alt="Bock Automotive Car"
+              class="relative z-10 w-64 sm:w-80 lg:w-96 h-auto max-w-full">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section py-12 sm:py-16 lg:py-20 relative z-10" id="gallery">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16">
+        <span
+          class="inline-block px-3 sm:px-4 py-1 bg-red-600/20 text-red-400 text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
+          Showcase
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+          Our <span class="text-red-500">Automotive</span> Gallery
+        </h2>
+        <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Explore our cutting-edge automotive technology and sustainable transportation solutions
+        </p>
+      </div>
+
+      <!-- Main Gallery Container -->
+      <div class="gallery-container mx-auto max-w-6xl">
+        <!-- Main Swiper -->
+        <div class="swiper gallery-main mb-6 sm:mb-8">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="gallery-card relative overflow-hidden rounded-xl sm:rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+                <img src="assets/img/bock_automotive_img1.jpg" alt="EV1 Sedan"
+                  class="gallery-image w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" />
+                <div
+                  class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                  <div>
+                    <h3 class="gallery-title text-lg sm:text-xl font-bold text-white mb-1">EV1 Sedan</h3>
+                    <p class="gallery-subtitle text-sm sm:text-base text-red-400">Electric Vehicle</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="gallery-card relative overflow-hidden rounded-xl sm:rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+                <img src="assets/img/bock_automotive_img2.jpg" alt="Sports EV"
+                  class="gallery-image w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" />
+                <div
+                  class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                  <div>
+                    <h3 class="gallery-title text-lg sm:text-xl font-bold text-white mb-1">Sports EV</h3>
+                    <p class="gallery-subtitle text-sm sm:text-base text-red-400">High Performance</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="gallery-card relative overflow-hidden rounded-xl sm:rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+                <img src="assets/img/bock_automotive_img3.jpg" alt="Momentum"
+                  class="gallery-image w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" />
+                <div
+                  class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                  <div>
+                    <h3 class="gallery-title text-lg sm:text-xl font-bold text-white mb-1">Momentum</h3>
+                    <p class="gallery-subtitle text-sm sm:text-base text-red-400">Powertrain Technology</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="gallery-card relative overflow-hidden rounded-xl sm:rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+                <img src="assets/img/bock_automotive_img4.jpg" alt="E-Wheeler"
+                  class="gallery-image w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" />
+                <div
+                  class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
+                  <div>
+                    <h3 class="gallery-title text-lg sm:text-xl font-bold text-white mb-1">E-Wheeler</h3>
+                    <p class="gallery-subtitle text-sm sm:text-base text-red-400">Urban Mobility</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons for mobile -->
+          <div class="swiper-button-next !text-red-500 !w-8 !h-8 sm:!w-10 sm:!h-10 after:!text-sm sm:after:!text-base">
+          </div>
+          <div class="swiper-button-prev !text-red-500 !w-8 !h-8 sm:!w-10 sm:!h-10 after:!text-sm sm:after:!text-base">
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination !bottom-2 sm:!bottom-4"></div>
+        </div>
+
+        <!-- Thumbnail Gallery - Hidden on mobile, visible on tablet+ -->
+        <div class="gallery-thumbs-container relative hidden md:block">
+          <div class="swiper gallery-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="thumb-card relative overflow-hidden rounded-lg border-2 border-transparent hover:border-red-600/50 transition-all duration-300 cursor-pointer">
+                  <img src="assets/img/bock_automotive_img1.jpg" alt="EV1 Sedan"
+                    class="thumb-image w-full h-16 sm:h-20 lg:h-24 object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="thumb-card relative overflow-hidden rounded-lg border-2 border-transparent hover:border-red-600/50 transition-all duration-300 cursor-pointer">
+                  <img src="assets/img/bock_automotive_img2.jpg" alt="Sports EV"
+                    class="thumb-image w-full h-16 sm:h-20 lg:h-24 object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="thumb-card relative overflow-hidden rounded-lg border-2 border-transparent hover:border-red-600/50 transition-all duration-300 cursor-pointer">
+                  <img src="assets/img/bock_automotive_img3.jpg" alt="Momentum"
+                    class="thumb-image w-full h-16 sm:h-20 lg:h-24 object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="thumb-card relative overflow-hidden rounded-lg border-2 border-transparent hover:border-red-600/50 transition-all duration-300 cursor-pointer">
+                  <img src="assets/img/bock_automotive_img4.jpg" alt="E-Wheeler"
+                    class="thumb-image w-full h-16 sm:h-20 lg:h-24 object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary to-primary-dark"></div>
+    <div
+      class="absolute top-5 sm:top-10 left-10 sm:left-20 w-64 sm:w-96 h-64 sm:h-96 bg-red-500/5 rounded-full blur-3xl">
+    </div>
+    <div
+      class="absolute bottom-5 sm:bottom-10 right-10 sm:right-20 w-48 sm:w-80 h-48 sm:h-80 bg-red-600/5 rounded-full blur-3xl">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16">
+        <span
+          class="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-red-600/10 border border-red-600/30 rounded-full text-red-400 text-xs sm:text-sm font-medium mb-3 sm:mb-4">
+          Automotive Products
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+          Our Automotive
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">
+            Products
+          </span>
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto px-4">
+          Advanced automotive technology solutions designed to push the boundaries of human transportation and
+          commercial automotive ventures
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+        <!-- Product 1: Electric Powertrain -->
+        <div class="product-card group">
+          <a href="product-details.html?product=momentum" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-battery-charge-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Electric Powertrain</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  Advanced electric powertrain technology for high-performance electric vehicles.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">Electric Systems</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 2: Autonomous Systems -->
+        <div class="product-card group">
+          <a href="product-details.html?product=zeyon-x90" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-700 to-red-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-steering-2-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-700 to-red-600 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Autonomous Systems</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  State-of-the-art autonomous driving technology with Level 4 automation.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">Self-Driving</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 3: Connected Vehicle -->
+        <div class="product-card group">
+          <a href="product-details.html?product=inertia" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-400 to-red-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-wifi-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-400 to-red-500 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Connected Vehicle</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  IoT platform for vehicle connectivity and smart infrastructure integration.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">IoT Platform</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 4: Smart Manufacturing -->
+        <div class="product-card group">
+          <a href="product-details.html?product=launch-vehicle" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-robot-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Smart Manufacturing</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  Industry 4.0 manufacturing with robotics and AI-driven quality control.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">Industry 4.0</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 5: Advanced Materials -->
+        <div class="product-card group">
+          <a href="product-details.html?product=inertia-nano" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-bubble-chart-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-600 to-red-500 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Advanced Materials</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  Revolutionary lightweight materials and composites for enhanced performance.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">Materials Tech</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 6: Safety Systems -->
+        <div class="product-card group">
+          <a href="product-details.html?product=inertia-mega" class="block">
+            <div
+              class="product-inner glass-effect-red glow-3d-red rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-gray-900/20 border border-red-600/20 hover:border-red-600/40 transition-all duration-300">
+              <div class="product-icon float-3d text-center mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-red-700 to-red-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <i class="ri-shield-check-line text-xl sm:text-2xl text-white"></i>
+                </div>
+                <div class="w-8 sm:w-12 h-1 bg-gradient-to-r from-red-700 to-red-500 rounded-full mx-auto opacity-60">
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 glow-text-red">Safety Systems</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3 sm:mb-4">
+                  Comprehensive safety technology with collision avoidance and protection.
+                </p>
+                <div class="flex items-center justify-between mt-3 sm:mt-4">
+                  <span class="text-red-400 text-xs font-medium">Safety Tech</span>
+                  <div class="flex space-x-1">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-red-700 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center">
+        <p class="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">Interested in our automotive technology solutions?
+        </p>
+        <a href="#work"
+          class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base">
+          <span>View Development Timeline</span>
+          <i class="ri-arrow-right-line ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="work" class="relative py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 md:px-6">
+      <div class="text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white font-display">Roadmap</h2>
+        <p class="mt-2 sm:mt-3 text-base sm:text-lg text-white/70">A clear sequence of milestones.</p>
+      </div>
+
+      <!-- Enhanced vertical timeline with improved visual design -->
+      <ol
+        class="relative mt-8 sm:mt-10 md:mt-12 max-w-4xl mx-auto border-s-2 border-gradient-to-b from-red-600/50 via-red-600/30 to-transparent">
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-red-600/30 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 0 — Training/Internship</h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Onboarding, fundamentals and team setup.</p>
+              </div>
+              </div>
+          </div>
+        </li>
+        
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-red-600/30 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 1 </h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Prototype build and initial testing.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-red-600/30 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 2 </h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Building the MVP of our SPV (If MSME/Nidhi Prayas/any other grants are approved).</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 3</h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Planning and building the whole manufacturing facility virtually (in Nvidia Omniverse).</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 4</h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Going out for funding (for building a manufacturing facility/building a production line). Estimated to be 500-800Cr.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 5</h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">Building the manufacturing facility and training all the robots in the production line
+
+</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="relative ps-6 sm:ps-8 md:ps-10 py-4 sm:py-5 md:py-6 group hover:ps-8 sm:hover:ps-10 md:hover:ps-12 transition-all duration-300">
+          <div
+            class="bg-gradient-to-r from-white/5 to-transparent rounded-lg p-3 sm:p-4 backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="text-white font-bold text-base sm:text-lg font-display">Phase 6</h4>
+                <p class="text-white/70 text-sm sm:text-base mt-1">First 500 cars will be manufactured (20 cars will be launched in the first round).
+
+</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-6 sm:mt-8 h-px w-full bg-gradient-to-r from-transparent via-red-600/40 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="relative bg-gradient-to-b from-primary via-black to-primary text-white border-t border-white/10">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,#000000,30%,#0a0a0a,70%,#140000)] opacity-50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-2xl font-bold text-secondary mb-2">
+              BOCK
+            </h2>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Innovating across multiple industries with cutting-edge technology and sustainable solutions for a better tomorrow.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+            <nav class="space-y-3">
+              <a href="https://bockbharath.com/aboutus.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">About Us</a>
+              <a href="https://bockbharath.com/sop.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Employees & SOPs</a>
+              <a href="https://bockbharath.com/progress.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Progress</a>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Products</h3>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative EV1</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative SPV</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Bock Foods</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">DroBock</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">ZipDroBock</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia Nano</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia Mega</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Momentum</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Zeyon X90</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">E-commerce</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BQP</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BAVT</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Orventus</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Eira</a>
+            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Typhronex</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Businesses</h3>
+          <nav class="space-y-3 text-sm">
+            <a href="https://automotive.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-orange-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Automotive
+            </a>
+            <a href="https://foods.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-green-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Foods
+            </a>
+            <a href="https://space.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-purple-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Space
+            </a>
+            <a href="https://ai.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-blue-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock AI
+            </a>
+            <a href="https://health.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-teal-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Health
+            </a>
+            <a href="https://chain.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-indigo-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Chain
+            </a>
+            <a href="#" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-yellow-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Institute
+            </a>
+            <a href="#" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Force
+            </a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Contact Us</h3>
+          <div class="space-y-4 mb-6 text-sm">
+            <div class="flex items-center gap-3">
+              <i class="ri-mail-line text-secondary text-lg"></i>
+              <a href="mailto:info@bockbharath.com" class="text-gray-400 hover:text-white transition">info@bockbharath.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="ri-phone-line text-secondary text-lg"></i>
+              <a href="tel:+916360288456" class="text-gray-400 hover:text-white transition">+91 6360288456</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-sm font-medium text-white mb-4">Follow Us</h4>
+            <div class="flex gap-4">
+              <a href="https://www.facebook.com/bockbharath/" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition group"><i class="ri-facebook-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.linkedin.com/company/bockbharth/" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition group"><i class="ri-linkedin-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://x.com/BockBH" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition group"><i class="ri-twitter-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.instagram.com/bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-lg flex items-center justify-center transition-all group"><i class="ri-instagram-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.youtube.com/@bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition group"><i class="ri-youtube-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-center md:text-left">
+            <p class="text-gray-400 text-sm">© 2024–2025 BOCK™. All Rights Reserved.</p>
+            <p class="text-gray-500 text-xs mt-1">Octakaigon Bock Private Limited</p>
+          </div>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm">
+            <span class="text-gray-400">Back to top</span>
+            <i class="ri-arrow-up-line text-gray-400"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Enhanced JavaScript Features -->
+  <script>
+    // Automotive Scroll progress bar
+    const prog = document.createElement('div');
+    prog.className = 'fixed top-0 left-0 h-1 bg-gradient-to-r from-red-600 to-red-500 z-[70] w-0 transition-all duration-150';
+    document.body.appendChild(prog);
+    window.addEventListener('scroll', () => {
+      const sc = window.scrollY;
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = Math.max(0, (sc / h) * 100) + '%';
+    }, { passive: true });
+
+    // Parallax mouse move
+    const parallaxItems = document.querySelectorAll('.parallax-item');
+    window.addEventListener('mousemove', (e) => {
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      parallaxItems.forEach(el => {
+        const depth = parseFloat(el.getAttribute('data-depth') || '0.02');
+        const x = (e.clientX - cx) * depth;
+        const y = (e.clientY - cy) * depth;
+        el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+    });
+
+    // Tilt on cards
+    const tiltEls = document.querySelectorAll('[data-tilt]');
+    tiltEls.forEach((el) => {
+      const maxTilt = 10;
+      const enterScale = 1.02;
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 2 - 1;
+        const y = ((e.clientY - r.top) / r.height) * 2 - 1;
+        const rx = (-y * maxTilt).toFixed(2);
+        const ry = (x * maxTilt).toFixed(2);
+        el.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${enterScale})`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'perspective(700px) rotateX(0) rotateY(0) scale(1)';
+        el.style.transition = 'transform 300ms';
+        setTimeout(() => (el.style.transition = ''), 320);
+      });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('opacity-100', 'translate-y-0');
+          e.target.classList.remove('opacity-0', 'translate-y-6');
+          obs.unobserve(e.target);
+        }
+      })
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => {
+      el.classList.add('opacity-0', 'translate-y-6', 'transition', 'duration-700');
+      obs.observe(el);
+    });
+
+    // Roadmap moving dot synced to scroll
+    (function () {
+      const roadSection = document.getElementById('work');
+      if (!roadSection) return;
+      const list = roadSection.querySelector('ol');
+      if (!list) return;
+      const items = Array.from(list.querySelectorAll('li'));
+      if (!items.length) return;
+
+      const cursor = document.createElement('span');
+      cursor.id = 'roadmapCursor';
+      cursor.setAttribute('aria-hidden', 'true');
+      cursor.style.position = 'absolute';
+      cursor.style.left = '-12px';
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      cursor.style.borderRadius = '9999px';
+      cursor.style.background = '#ed1f27';
+      cursor.style.boxShadow = '0 0 18px rgba(237,31,39,0.55)';
+      cursor.style.transition = 'top 360ms cubic-bezier(.22,.61,.36,1)';
+      cursor.style.top = '0px';
+      cursor.style.zIndex = '1';
+      list.appendChild(cursor);
+
+      function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
+      function updateCursor() {
+        const vpCenter = window.scrollY + window.innerHeight / 2;
+        const listRect = list.getBoundingClientRect();
+        const listTop = window.scrollY + listRect.top;
+        const listBottom = window.scrollY + listRect.bottom;
+        const listHeight = Math.max(1, listBottom - listTop);
+        let closestI = 0, closestD = Infinity, closestCenter = listTop;
+        items.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          const c = window.scrollY + r.top + r.height / 2;
+          const d = Math.abs(c - vpCenter);
+          if (d < closestD) { closestD = d; closestI = items.indexOf(el); closestCenter = c; }
+        });
+        const pos = clamp((closestCenter - listTop) / listHeight, 0, 1);
+        const y = pos * listRect.height;
+        cursor.style.top = `${y - 10}px`;
+      }
+
+      window.addEventListener('scroll', updateCursor, { passive: true });
+      window.addEventListener('resize', updateCursor);
+      updateCursor();
+    })();
+
+    // Initialize Swiper for Gallery
+    if (typeof Swiper !== 'undefined') {
+      const galleryMain = new Swiper('.gallery-main', {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            spaceBetween: 20,
+          },
+          768: {
+            spaceBetween: 30,
+          },
+        },
+        thumbs: {
+          swiper: {
+            el: '.gallery-thumbs',
+            spaceBetween: 10,
+            slidesPerView: 4,
+            watchSlidesProgress: true,
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

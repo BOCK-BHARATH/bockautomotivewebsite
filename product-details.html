@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Bock Automotive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="icon" type="image/x-icon" href="assets/Automative.svg">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0A0F1C',
+                        'primary-dark': '#060B15',
+                        'secondary': '#DC2626',
+                        'accent': '#EF4444',
+                        'electric': '#F87171',
+                        'navy': '#1E293B',
+                        'midnight': '#0F172A',
+                        'slate': '#334155',
+                        'red': '#DC2626'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-red': 'pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'pulse-red': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: .5 }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glow-text {
+            text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #DC2626, transparent);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary via-primary-dark to-black min-h-screen text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="assets/Automative.svg" alt="Bock Automotive" class="w-8 h-8">
+                    <span class="text-xl font-bold text-white">Bock Automotive</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium px-2 py-1 rounded">Home</a>
+                    <a href="index.html#products" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium px-2 py-1 rounded">Products</a>
+                    <a href="index.html#work" class="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium px-2 py-1 rounded">Roadmap</a>
+                    <a href="https://bockbharath.com/joinus.html" class="bg-secondary hover:bg-secondary/80 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">Join Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="lg:hidden text-white">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-white/10">
+                <div class="px-4 py-6 space-y-4">
+                    <a href="index.html" class="block w-full text-center text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium py-3">Home</a>
+                    <a href="index.html#products" class="block w-full text-center text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium py-3">Products</a>
+                    <a href="index.html#work" class="block w-full text-center text-gray-300 hover:text-white transition-colors duration-200 text-base font-medium py-3">Roadmap</a>
+                    <a href="https://bockbharath.com/joinus.html" class="block w-full text-center bg-secondary hover:bg-secondary/80 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-base mx-4">Join Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-black to-primary-dark"></div>
+            <div class="absolute top-10 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center gap-3 px-4 py-2 bg-secondary/20 rounded-full border border-secondary/30 mb-8">
+                    <i class="ri-arrow-left-line text-electric"></i>
+                    <a href="index.html" class="text-electric font-medium hover:text-accent transition-colors">Back to Home</a>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 glow-text animate-fade-in" id="product-title">
+                    Loading...
+                </h1>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-12 animate-slide-up" id="product-description">
+                    Loading product details...
+                </p>
+
+                <div class="section-divider"></div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Sections -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Loading Indicator -->
+                <div id="loading" class="text-center py-20">
+                    <div class="inline-block w-8 h-8 border-4 border-secondary border-r-transparent rounded-full animate-spin"></div>
+                    <p class="mt-4 text-gray-400">Loading product information...</p>
+                </div>
+
+                <!-- Content Container -->
+                <div id="product-content" class="hidden space-y-20">
+                    <!-- Content sections will be dynamically generated here -->
+                </div>
+
+                <!-- Benefits Grid -->
+                <div class="mt-20">
+                    <h3 class="text-3xl font-bold text-center text-white mb-12">Why Choose Our Automotive Solutions?</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-car-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Automotive Excellence</h4>
+                            <p class="text-gray-400 text-sm">Advanced automotive technology engineered for performance and reliability.</p>
+                        </div>
+
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-shield-check-line text-2xl text-electric"></i>
+                                </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Safety Standards</h4>
+                            <p class="text-gray-400 text-sm">Industry-leading safety protocols ensuring maximum driver and passenger protection.</p>
+                        </div>
+
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-battery-charge-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Electric Innovation</h4>
+                            <p class="text-gray-400 text-sm">Next-generation electric and autonomous vehicle technology solutions.</p>
+                        </div>
+
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-global-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Global Integration</h4>
+                            <p class="text-gray-400 text-sm">Seamless integration with global automotive industry standards.</p>
+                        </div>
+
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-settings-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Advanced Automation</h4>
+                            <p class="text-gray-400 text-sm">Intelligent automation systems for enhanced vehicle performance.</p>
+                        </div>
+
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-leaf-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Sustainable Design</h4>
+                            <p class="text-gray-400 text-sm">Environmentally conscious automotive solutions for a cleaner future.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-20 text-center">
+                    <div class="section-divider"></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Ready to Drive Innovation?</h3>
+                    <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Join us in shaping the future of automotive technology with cutting-edge solutions.</p>
+                    <a href="index.html#products" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-secondary to-accent text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-secondary/25 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="ri-arrow-left-line mr-2"></i>
+                        Back to Products
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-b from-primary via-black to-primary text-white border-t border-white/10">
+      <div class="h-px bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-2xl font-bold text-secondary mb-2">
+                BOCK
+              </h2>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Pioneering automotive innovation with next-generation vehicles and mobility solutions for a smarter future.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+              <nav class="space-y-3">
+                <a href="https://bockbharath.com/aboutus.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">About Us</a>
+                <a href="https://bockbharath.com/sop.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Employees & SOPs</a>
+                <a href="https://bockbharath.com/progress.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Progress</a>
+              </nav>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-6">Products</h3>
+            <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+              <a href="product-details.html?product=automotive-ev1"
+                class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automotive EV1</a>
+              <a href="product-details.html?product=automotive-spv"
+                class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automotive SPV</a>
+              <a href="product-details.html?product=bock-foods"
+                class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Bock Foods</a>
+              <a href="product-details.html?product=dro-bock"
+                class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">DroBock</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-6">Businesses</h3>
+            <nav class="space-y-3 text-sm">
+              <a href="#businesses"
+                class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+                <div class="w-2 h-2 bg-orange-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+                Bock Automotive
+              </a>
+              <a href="#businesses"
+                class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+                <div class="w-2 h-2 bg-green-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+                Bock Foods
+              </a>
+              <a href="#businesses"
+                class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+                <div class="w-2 h-2 bg-purple-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+                Bock Space
+              </a>
+              <a href="#businesses"
+                class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+                <div class="w-2 h-2 bg-blue-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+                Bock AI
+              </a>
+              <a href="#businesses"
+                class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+                <div class="w-2 h-2 bg-teal-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+                Bock Health
+              </a>
+            </nav>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-6">Contact Us</h3>
+            <div class="space-y-4 mb-6 text-sm">
+              <div class="flex items-center gap-3">
+                <i class="ri-mail-line text-secondary text-lg"></i>
+                <a href="mailto:info@bockbharath.com" class="text-gray-400 hover:text-white transition">info@bockbharath.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="ri-phone-line text-secondary text-lg"></i>
+                <a href="tel:+916360288456" class="text-gray-400 hover:text-white transition">+91 6360288456</a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-medium text-white mb-4">Follow Us</h4>
+              <div class="flex gap-4">
+                <a href="https://www.facebook.com/bockbharath/" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition group"><i class="ri-facebook-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+                <a href="https://www.linkedin.com/company/bockbharth/" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition group"><i class="ri-linkedin-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+                <a href="https://x.com/BockBH" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition group"><i class="ri-twitter-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+                <a href="https://www.instagram.com/bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-lg flex items-center justify-center transition-all group"><i class="ri-instagram-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+                <a href="https://www.youtube.com/@bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition group"><i class="ri-youtube-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/20 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+              <p class="text-gray-400 text-sm">© 2024–2025 BOCK™. All Rights Reserved.</p>
+              <p class="text-gray-500 text-xs mt-1">Octakaigon Bock Private Limited</p>
+            </div>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm">
+              <span class="text-gray-400">Back to top</span>
+              <i class="ri-arrow-up-line text-gray-400"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Include Product Data -->
+    <script src="assets/js/automotive-product-data.js"></script>
+
+    <!-- Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Debug: Check if productData is loaded
+            console.log('Product data loaded:', typeof productData !== 'undefined');
+            console.log('Product data:', productData);
+
+            // Get product ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('product');
+
+            console.log('Product ID from URL:', productId);
+
+            // Handle both old and new data structure for backward compatibility
+            if (!productId || !productData[productId]) {
+                console.error('Product not found:', productId);
+                document.getElementById('loading').innerHTML = '<p class="text-red-400">Product not found</p>';
+                return;
+            }
+
+            const product = productData[productId];
+            console.log('Loading product:', product);
+            const metadata = product.metadata || product;
+            const contentSections = product.contentSections || [];
+
+            // Update hero section
+            document.getElementById('product-title').textContent = metadata.name;
+            document.getElementById('product-description').textContent = metadata.description;
+
+            // Use dynamic content sections from product data
+            const contentContainer = document.getElementById('product-content');
+            const sections = contentSections;
+
+            sections.forEach((section, index) => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'glass-effect rounded-2xl p-8 hover:scale-105 transition-transform duration-300';
+
+                if (section.type === 'content-image') {
+                    sectionDiv.innerHTML = `
+                        <div class="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-4">${section.title}</h3>
+                                <p class="text-gray-300 leading-relaxed">${section.content}</p>
+                            </div>
+                            <div class="relative">
+                                <img src="${section.image}" alt="${section.title}" class="w-full h-64 object-contain rounded-lg">
+                                <div class="absolute inset-0 bg-secondary/20 rounded-lg"></div>
+                            </div>
+                        </div>
+                    `;
+                } else if (section.type === 'content-video') {
+                    sectionDiv.innerHTML = `
+                        <div class="grid lg:grid-cols-2 gap-8 items-center">
+                            <div class="relative">
+                                <iframe src="${section.video}" class="w-full h-64 rounded-lg" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-4">${section.title}</h3>
+                                <p class="text-gray-300 leading-relaxed">${section.content}</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (section.type === 'content-document') {
+                    sectionDiv.innerHTML = `
+                        <div class="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-4">${section.title}</h3>
+                                <p class="text-gray-300 leading-relaxed mb-6">${section.content}</p>
+                                <a href="${section.document}" download class="inline-flex items-center px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary/80 transition-colors">
+                                    <i class="ri-download-line mr-2"></i>
+                                    Download Documentation
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-center h-64 bg-secondary/10 rounded-lg border-2 border-dashed border-secondary/30">
+                                <div class="text-center">
+                                    <i class="ri-file-pdf-line text-4xl text-electric mb-4"></i>
+                                    <p class="text-gray-400">Technical Documentation</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    sectionDiv.innerHTML = `
+                        <div class="text-center max-w-4xl mx-auto">
+                            <h3 class="text-2xl font-bold text-white mb-6">${section.title}</h3>
+                            <p class="text-gray-300 leading-relaxed text-lg">${section.content}</p>
+                        </div>
+                    `;
+                }
+
+                contentContainer.appendChild(sectionDiv);
+
+                if (index < sections.length - 1) {
+                    const divider = document.createElement('div');
+                    divider.className = 'section-divider';
+                    contentContainer.appendChild(divider);
+                }
+            });
+
+            // Hide loading and show content
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('product-content').classList.remove('hidden');
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>

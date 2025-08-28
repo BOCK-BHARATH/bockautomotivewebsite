@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #050816;
+  --primary-color-dark: #050816;
+  --secondary-color: #ed1f27;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #050816 0%, #0F172A 25%, #ed1f27 50%, #0F172A 75%, #050816 100%);
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 3D Product Animation Styles */
+.product-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.product-card:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+}
+
+.product-inner {
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.product-card:hover .product-inner {
+  transform: translateZ(30px);
+}
+
+.product-icon {
+  transform: translateZ(50px);
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .product-icon {
+  transform: translateZ(80px) rotateY(10deg);
+}
+
+.product-content {
+  transform: translateZ(20px);
+}
+
+@keyframes float3d {
+  0%, 100% { 
+    transform: translateZ(0px) rotateX(0deg);
+  }
+  50% { 
+    transform: translateZ(20px) rotateX(5deg);
+  }
+}
+
+.float-3d {
+  animation: float3d 4s ease-in-out infinite;
+}
+
+/* Red themed glass and glow effects */
+.glass-effect-red {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(237, 31, 39, 0.2);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 20px rgba(237, 31, 39, 0.5);
+}
+
+.glow-3d-red {
+  box-shadow: 
+    0 0 20px rgba(237, 31, 39, 0.3),
+    0 0 60px rgba(237, 31, 39, 0.1),
+    inset 0 0 20px rgba(237, 31, 39, 0.1);
+}
+
+.product-card:hover .glow-3d-red {
+  box-shadow: 
+    0 0 30px rgba(237, 31, 39, 0.5),
+    0 0 80px rgba(237, 31, 39, 0.2),
+    inset 0 0 30px rgba(237, 31, 39, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ed1f27, #dc2626);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+}
+
+/* Keep original styles for layout compatibility */
+nav {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1rem;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.upper-left-img {
+  position: relative;
+  width: 80px;
+  margin-right: 2rem;
+  margin-left: -3em;
+  animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.link a {
+  padding: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.link a:hover {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .upper-left-img {
+    margin: 0 0 1rem 0;
+  }
+
+  .nav__links {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+
+.container-space {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.container__left {
+  flex: 1;
+  min-height: 700px;
+  background-image: url("assets/bg1.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.container__right {
+  flex: 1.5;
+  position: relative;
+}
+
+.container__right img {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 400px;
+  max-width: 420px;
+}
+
+.right__content {
+  text-align: right;
+  max-width: 600px;
+  margin-left: 8rem;
+  margin-top: 8rem;
+  padding: 2rem;
+}
+
+.right__content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  color: var(--secondary-color);
+}
+
+.right__content h4 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.right__content p {
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.btn {
+  margin-bottom: 3rem;
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.primary__btn {
+  margin-right: 1rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.secondary__btn {
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.socials span {
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials span:hover {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 780px) {
+  nav {
+    justify-content: center;
+  }
+
+  .nav__links {
+    gap: 1rem;
+  }
+
+  .upper-left-img{
+    width: 40%;
+    left: 30%;
+  }
+  .container-space {
+    flex-direction: column;
+  }
+
+  .container__left {
+    min-height: 500px;
+  }
+
+  .left__content {
+    max-width: none;
+    margin: 6rem 0;
+    text-align: center;
+  }
+
+  .container__right {
+    min-height: 500px;
+  }
+
+  .container__right img {
+    left: 53%;
+    top: 23%;
+    transform: translate(-50%, -100%);
+  }
+
+  .right__content {
+    text-align: center;
+    margin: 8rem 8px 0 0;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+  .btn-s .btn-shine{
+    padding: 15px;
+    right: 38%;
+  }
+  .chain{
+    display: none;
+  }
+}
