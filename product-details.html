@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Bock Automotive</title>
+    <title>Product Details - Bock Space</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="icon" type="image/x-icon" href="assets/Automative.svg">
-
+<link rel="icon" type="image/svg+xml" href="assets/Automative.svg" />
+  <link rel="icon" type="image/x-icon" href="assets/Automative.svg" />
+  <link rel="apple-touch-icon" href="assets/Automative.svg" />
+  <meta name="theme-color" content="#ed1f27" />    
     <script>
         tailwind.config = {
             theme: {
@@ -22,7 +24,7 @@
                         'navy': '#1E293B',
                         'midnight': '#0F172A',
                         'slate': '#334155',
-                        'red': '#DC2626'
+                        'azure': '#0EA5E9'
                     },
                     fontFamily: {
                         'poppins': ['Poppins', 'sans-serif']
@@ -67,7 +69,7 @@
         }
         .section-divider {
             height: 2px;
-            background: linear-gradient(90deg, transparent, #DC2626, transparent);
+            background: linear-gradient(90deg, transparent, #EF4444, transparent);
             margin: 2rem 0;
         }
     </style>
@@ -116,20 +118,20 @@
             <div class="absolute inset-0 bg-gradient-to-br from-primary via-black to-primary-dark"></div>
             <div class="absolute top-10 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
-
+            
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="inline-flex items-center gap-3 px-4 py-2 bg-secondary/20 rounded-full border border-secondary/30 mb-8">
                     <i class="ri-arrow-left-line text-electric"></i>
                     <a href="index.html" class="text-electric font-medium hover:text-accent transition-colors">Back to Home</a>
                 </div>
-
+                
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 glow-text animate-fade-in" id="product-title">
                     Loading...
                 </h1>
                 <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-12 animate-slide-up" id="product-description">
                     Loading product details...
                 </p>
-
+                
                 <div class="section-divider"></div>
             </div>
         </section>
@@ -145,164 +147,191 @@
 
                 <!-- Content Container -->
                 <div id="product-content" class="hidden space-y-20">
+                    <!-- Content sections will be dynamically generated here -->
                 </div>
 
                 <!-- Benefits Grid -->
                 <div class="mt-20">
-                    <h3 class="text-3xl font-bold text-center text-white mb-12">Why Choose Our Automotive Solutions?</h3>
+                    <h3 class="text-3xl font-bold text-center text-white mb-12">Why Choose Our Space Technology?</h3>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                             <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="ri-car-line text-2xl text-electric"></i>
+                                <i class="ri-rocket-line text-2xl text-electric"></i>
                             </div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Automotive Excellence</h4>
-                            <p class="text-gray-400 text-sm">Advanced automotive technology engineered for performance and reliability.</p>
+                            <h4 class="text-lg font-semibold text-white mb-2">Advanced Propulsion</h4>
+                            <p class="text-gray-400 text-sm">Cutting-edge propulsion systems for efficient space exploration.</p>
                         </div>
-
+                        
                         <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                             <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="ri-shield-check-line text-2xl text-electric"></i>
-                                </div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Safety Standards</h4>
-                            <p class="text-gray-400 text-sm">Industry-leading safety protocols ensuring maximum driver and passenger protection.</p>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Mission Reliability</h4>
+                            <p class="text-gray-400 text-sm">Proven track record of successful space missions and operations.</p>
                         </div>
-
+                        
                         <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                             <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="ri-battery-charge-line text-2xl text-electric"></i>
+                                <i class="ri-brain-line text-2xl text-electric"></i>
                             </div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Electric Innovation</h4>
-                            <p class="text-gray-400 text-sm">Next-generation electric and autonomous vehicle technology solutions.</p>
+                            <h4 class="text-lg font-semibold text-white mb-2">AI Navigation</h4>
+                            <p class="text-gray-400 text-sm">Intelligent autonomous navigation and guidance systems.</p>
                         </div>
-
+                        
                         <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                             <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="ri-global-line text-2xl text-electric"></i>
                             </div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Global Integration</h4>
-                            <p class="text-gray-400 text-sm">Seamless integration with global automotive industry standards.</p>
+                            <h4 class="text-lg font-semibold text-white mb-2">Global Connectivity</h4>
+                            <p class="text-gray-400 text-sm">Worldwide communication and data transmission capabilities.</p>
                         </div>
-
+                        
                         <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                             <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="ri-settings-line text-2xl text-electric"></i>
-                            </div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Advanced Automation</h4>
-                            <p class="text-gray-400 text-sm">Intelligent automation systems for enhanced vehicle performance.</p>
-                        </div>
-
-                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="ri-leaf-line text-2xl text-electric"></i>
+                                <i class="ri-recycle-line text-2xl text-electric"></i>
                             </div>
                             <h4 class="text-lg font-semibold text-white mb-2">Sustainable Design</h4>
-                            <p class="text-gray-400 text-sm">Environmentally conscious automotive solutions for a cleaner future.</p>
+                            <p class="text-gray-400 text-sm">Environmentally conscious and reusable space technology.</p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-star-line text-2xl text-electric"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Deep Space Ready</h4>
+                            <p class="text-gray-400 text-sm">Designed for long-duration missions beyond Earth orbit.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Call to Action -->
-                <div class="mt-20 text-center">
-                    <div class="section-divider"></div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Ready to Drive Innovation?</h3>
-                    <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Join us in shaping the future of automotive technology with cutting-edge solutions.</p>
-                    <a href="index.html#products" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-secondary to-accent text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-secondary/25 transition-all duration-300 transform hover:-translate-y-1">
-                        <i class="ri-arrow-left-line mr-2"></i>
-                        Back to Products
-                    </a>
-                </div>
+                
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="relative bg-gradient-to-b from-primary via-black to-primary text-white border-t border-white/10">
+     <footer class="relative bg-gradient-to-b from-primary via-black to-primary text-white border-t border-white/10">
     <div class="absolute inset-0 bg-[linear-gradient(135deg,#000000,30%,#0a0a0a,70%,#140000)] opacity-50"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        <div class="space-y-6">
+        <div class="Automotive-y-6">
           <div>
             <h2 class="text-2xl font-bold text-secondary mb-2">
               BOCK
             </h2>
             <p class="text-gray-400 text-sm leading-relaxed">
-              Innovating across multiple industries with cutting-edge technology and sustainable solutions for a better tomorrow.
+              Innovating across multiple industries with cutting-edge technology and sustainable solutions for a better
+              tomorrow.
             </p>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
-            <nav class="space-y-3">
-              <a href="https://bockbharath.com/aboutus.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">About Us</a>
-              <a href="https://bockbharath.com/progress.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Progress</a>
-                                          <a href="https://bockbharath.com/internship.html" class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Join US</a>
-
+            <h3 class="text-lg font-semibold text-white mb-6">Company</h3>
+            <nav class="space-y-4">
+              <a href="https://bockbharath.com/aboutus.html"
+                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">About
+                Us</a>
+              <a href="https://bockbharath.com/progress.html"
+                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Progress</a>
+              <a href="https://bockbharath.com/internship.html"
+                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Join
+                Us</a>
             </nav>
           </div>
         </div>
         <div>
           <h3 class="text-lg font-semibold text-white mb-6">Products</h3>
           <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative EV1</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative SPV</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Bock Foods</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">DroBock</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">ZipDroBock</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia Nano</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia Mega</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Momentum</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Zeyon X90</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">E-commerce</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BQP</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BAVT</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Orventus</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Eira</a>
-            <a href="#" class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Typhronex</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative
+              EV1</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative
+              SPV</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Bock
+              Foods</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">DroBock</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">ZipDroBock</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia
+              Nano</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia
+              Mega</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Momentum</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Zeyon
+              X90</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">E-commerce</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BQP</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BAVT</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Orventus</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Eira</a>
+            <a href="#"
+              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Typhronex</a>
           </div>
         </div>
         <div>
-          <h3 class="text-lg font-semibold text-white mb-6">Businesses</h3>
-          <nav class="space-y-3 text-sm">
-            <a href="https://automotive.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-orange-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+          <h3 class="text-lg font-semibold text-white mb-8">Businesses</h3>
+          <nav class="space-y-4 text-sm">
+            <a href="https://automotive.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Automotive
             </a>
-            <a href="https://foods.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-green-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+            <a href="https://foods.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Foods
             </a>
-            <a href="https://space.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-purple-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Space
+            <a href="https://Automotive.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+              Bock Automotive
             </a>
-            <a href="https://ai.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-blue-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+            <a href="https://ai.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock AI
             </a>
-            <a href="https://health.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-teal-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+            <a href="https://health.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Health
             </a>
-            <a href="https://chain.bockbharath.com" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-indigo-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+            <a href="https://chain.bockbharath.com"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Chain
             </a>
-            <a href="#" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-yellow-500 rounded-full opacity-60 group-hover:opacity-100"></div>
+            <a href="#"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Institute
             </a>
-            <a href="#" class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
+            <a href="#"
+              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
               <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
               Bock Force
             </a>
           </nav>
         </div>
         <div>
-          <h3 class="text-lg font-semibold text-white mb-6">Contact Us</h3>
-          <div class="space-y-4 mb-6 text-sm">
+          <h3 class="text-lg font-semibold text-white mb-8">Contact Us</h3>
+          <div class="space-y-6 mb-8 text-sm">
             <div class="flex items-center gap-3">
               <i class="ri-mail-line text-secondary text-lg"></i>
-              <a href="mailto:info@bockbharath.com" class="text-gray-400 hover:text-white transition">info@bockbharath.com</a>
+              <a href="mailto:info@bockbharath.com"
+                class="text-gray-400 hover:text-white transition">info@bockbharath.com</a>
             </div>
             <div class="flex items-center gap-3">
               <i class="ri-phone-line text-secondary text-lg"></i>
@@ -312,11 +341,21 @@
           <div>
             <h4 class="text-sm font-medium text-white mb-4">Follow Us</h4>
             <div class="flex gap-4">
-              <a href="https://www.facebook.com/bockbharath/" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition group"><i class="ri-facebook-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.linkedin.com/company/bockbharth/" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition group"><i class="ri-linkedin-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://x.com/BockBH" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition group"><i class="ri-twitter-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.instagram.com/bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-lg flex items-center justify-center transition-all group"><i class="ri-instagram-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.youtube.com/@bockbharath" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition group"><i class="ri-youtube-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.facebook.com/bockbharath/"
+                class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition group"><i
+                  class="ri-facebook-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.linkedin.com/company/bockbharth/"
+                class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition group"><i
+                  class="ri-linkedin-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://x.com/BockBH"
+                class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition group"><i
+                  class="ri-twitter-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.instagram.com/bockbharath"
+                class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-lg flex items-center justify-center transition-all group"><i
+                  class="ri-instagram-fill text-gray-400 group-hover:text-white text-lg"></i></a>
+              <a href="https://www.youtube.com/@bockbharath"
+                class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition group"><i
+                  class="ri-youtube-fill text-gray-400 group-hover:text-white text-lg"></i></a>
             </div>
           </div>
         </div>
@@ -327,7 +366,8 @@
             <p class="text-gray-400 text-sm">© 2024–2025 BOCK™. All Rights Reserved.</p>
             <p class="text-gray-500 text-xs mt-1">Octakaigon Bock Private Limited</p>
           </div>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm">
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm">
             <span class="text-gray-400">Back to top</span>
             <i class="ri-arrow-up-line text-gray-400"></i>
           </button>
@@ -337,41 +377,40 @@
   </footer>
 
     <!-- Include Product Data -->
-    <script src="assets/js/automotive-product-data.js"></script>
-
+    <script src="assets/js/product-data.js"></script>
+    
     <!-- Page Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Debug: Check if productData is loaded
             console.log('Product data loaded:', typeof productData !== 'undefined');
             console.log('Product data:', productData);
+            
+            // Get product ID from URL parameter
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('product');
-
+            
             console.log('Product ID from URL:', productId);
-
+            
             if (!productId || !productData[productId]) {
                 console.error('Product not found:', productId);
                 document.getElementById('loading').innerHTML = '<p class="text-red-400">Product not found</p>';
                 return;
             }
-
+            
             const product = productData[productId];
             console.log('Loading product:', product);
             const metadata = product.metadata || product;
             const contentSections = product.contentSections || [];
-
-            // Update hero section
             document.getElementById('product-title').textContent = metadata.name;
             document.getElementById('product-description').textContent = metadata.description;
-
-            // Use dynamic content sections from product data
             const contentContainer = document.getElementById('product-content');
             const sections = contentSections;
-
+            
             sections.forEach((section, index) => {
                 const sectionDiv = document.createElement('div');
                 sectionDiv.className = 'glass-effect rounded-2xl p-8 hover:scale-105 transition-transform duration-300';
-
+                
                 if (section.type === 'content-image') {
                     sectionDiv.innerHTML = `
                         <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -424,19 +463,23 @@
                         </div>
                     `;
                 }
-
+                
                 contentContainer.appendChild(sectionDiv);
-
+                
                 if (index < sections.length - 1) {
                     const divider = document.createElement('div');
                     divider.className = 'section-divider';
                     contentContainer.appendChild(divider);
                 }
             });
+            
+            // Hide loading and show content
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('product-content').classList.remove('hidden');
         });
-            const btn = document.getElementById('menuBtn');
+        
+        // Mobile Menu Toggle
+        const btn = document.getElementById('menuBtn');
         const menu = document.getElementById('mobileMenu');
         if (btn && menu) {
             btn.addEventListener('click', () => menu.classList.toggle('hidden'));
