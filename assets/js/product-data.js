@@ -1,10 +1,11 @@
 const productData = {
-
-  'inertia': {
-    name: 'Inertia EV',
+  //product-2
+  'automotive-spv1': {
+    name: 'Automotive SPV1',
     subtitle: 'Mid-Range Electric Vehicle Platform',
     description: 'Advanced mid-range electric vehicle system with enhanced communication capabilities, intelligent battery management, and extended driving range for comprehensive automotive applications and long-distance transportation.',
     icon: 'ri-car-line',
+    image: 'image/car_side.png',
     category: 'Electric Vehicle Systems',
 
     contentSections: [
@@ -12,19 +13,19 @@ const productData = {
         title: 'Advanced Electric Vehicle Technology',
         content: 'Our Inertia EV represents cutting-edge electric vehicle technology, incorporating advanced battery systems and intelligent power management. With robust engineering and comprehensive testing protocols, this platform delivers exceptional performance for extended automotive missions.',
         type: 'content-image',
-        image: 'assets/automotive_middle.png'
+        image: 'image/car_side.png'
       },
       {
         title: 'Extended Vehicle Operations',
         content: 'Discover how Inertia EV enables extended automotive missions through intelligent battery management and enhanced electric systems. This comprehensive system provides reliable operation with extended range and intelligent vehicle management.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/L_jWHffIx5E'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'EV System Integration',
         content: 'Watch comprehensive electric vehicle testing procedures and system integration processes for Inertia EV. This detailed video demonstrates our advanced testing protocols, thermal management testing, and performance validation for extended mission reliability.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/2g811Eo7K8U'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'EV Technical Documentation',
@@ -52,13 +53,14 @@ const productData = {
     ],
 
   },
-
-  'momentum': {
-    name: 'Momentum Performance EV',
+//product-3
+  'bock-terafactory': {
+    name: 'Bock Terafactory',
     subtitle: 'High-Performance Electric Propulsion',
     description: 'Advanced electric propulsion system designed for efficient vehicle operations, optimum performance, and intelligent power management for high-performance automotive applications.',
     icon: 'ri-rocket-line',
     category: 'Electric Performance Systems',
+    image: 'image/Automotive _Assembly.png',
     price: 'Starting at ₹50,00,00,000',
     rating: 4.8,
     availability: 'Available for integration',
@@ -66,21 +68,21 @@ const productData = {
     contentSections: [
       {
         title: 'High-Performance Electric Propulsion Technology',
-        content: 'Our Momentum Performance EV represents revolutionary electric propulsion technology, featuring high-efficiency motors and intelligent performance management. With precision engineering and extensive validation, this system delivers exceptional automotive performance.',
+        content: 'Our Bock Terafactory represents revolutionary electric propulsion technology, featuring high-efficiency motors and intelligent performance management. With precision engineering and extensive validation, this system delivers exceptional automotive performance.',
         type: 'content-image',
-        image: 'assets/automotive_middle.png'
+        image: 'image/Automotive _Assembly.png'
       },
       {
         title: 'Performance EV Operations',
         content: 'Discover how Momentum enables efficient automotive performance through advanced electric propulsion and intelligent systems. This comprehensive system provides variable thrust capabilities and efficiency optimization.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/wbSwFU6tY1c'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'Electric Performance Testing',
         content: 'Watch comprehensive electric propulsion testing procedures and engine validation for Momentum. This detailed demonstration covers electric powertrain efficiency, performance benchmarking, and validation for automotive applications.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/VBlIvghQTlI'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'Performance EV Technical Manual',
@@ -128,13 +130,14 @@ const productData = {
       }
     ]
   },
-
-  'zeyon-x90': {
-    name: 'Zeyon X90 Autonomous',
+//product-1
+  'automotive-ev1': {
+    name: 'Automotive EV1',
     subtitle: 'AI-Powered Autonomous Driving System',
     description: 'Revolutionary navigation and guidance system with AI-powered autonomous capabilities for precision vehicle maneuvering, autonomous operations, and formation driving in automotive applications.',
     icon: 'ri-eye-line',
     category: 'Autonomous Driving & Navigation',
+    image: 'image/Vehicle _Elec.png',
     price: 'Starting at ₹15,00,00,000',
     rating: 4.9,
     availability: 'Available for immediate integration',
@@ -142,21 +145,21 @@ const productData = {
     contentSections: [
       {
         title: 'AI Autonomous Driving Technology',
-        content: 'Our Zeyon X90 Autonomous represents breakthrough AI-powered automotive driving, incorporating machine learning algorithms and autonomous decision-making capabilities. With advanced sensors and real-time processing, this system delivers precision autonomous driving for complex automotive missions.',
+        content: 'Our Automotive EV1 represents breakthrough AI-powered automotive driving, incorporating machine learning algorithms and autonomous decision-making capabilities. With advanced sensors and real-time processing, this system delivers precision autonomous driving for complex automotive missions.',
         type: 'content-image',
-        image: 'assets/automotive_middle.png'
+        image: 'image/Vehicle _Elec.png'
       },
       {
         title: 'Autonomous Vehicle Operations',
         content: 'Discover how Zeyon X90 enables autonomous automotive navigation through advanced AI algorithms and precision guidance. This comprehensive system provides real-time autonomous decision making, hazard avoidance, and automotive autonomous operations.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/RK8xHq6dfAo'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'AI Autonomous Testing & Validation',
         content: 'Watch comprehensive AI autonomous testing procedures and system validation for Zeyon X90. This detailed demonstration covers AI testing protocols, simulation validation, automotive testing, and autonomous performance verification.',
         type: 'content-video',
-        video: 'https://www.youtube.com/embed/hFJHtdIGOJM'
+        video: 'https://www.youtube.com'
       },
       {
         title: 'Autonomous Driving Technical Manual',

@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
   <link rel="icon" type="image/svg+xml" href="assets/Automative.svg" />
   <link rel="icon" type="image/x-icon" href="assets/Automative.svg" />
   <link rel="apple-touch-icon" href="assets/Automative.svg" />
   <meta name="theme-color" content="#ed1f27" />
 
   <script>
-    if (window.tailwind) {
       tailwind.config = {
         theme: {
           extend: {
@@ -25,7 +26,8 @@
               'navy': '#1E293B',
               'midnight': '#0F172A',
               'slate': '#334155',
-              'azure': '#0EA5E9'
+              'azure': '#0EA5E9',
+              'space-navy': '#0a0a2e',  
             },
             fontFamily: {
               'poppins': ['Poppins', 'sans-serif']
@@ -72,9 +74,22 @@
           }
         }
       };
-    }
+
   </script>
   <style>
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+    a {
+  max-width: none;
+}
+
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
     body {
@@ -419,7 +434,7 @@
   </script>
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden max-w-full">
     <!-- Background Elements -->
     <div class="absolute inset-0">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-midnight to-primary-dark"></div>
@@ -484,15 +499,17 @@
         </div>
 
         <!-- Car Visual -->
-        <div class="relative flex justify-center lg:justify-end order-1 lg:order-2">
-          <div class="relative">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-400/20 rounded-full blur-3xl scale-150">
-            </div>
-            <img src="assets/automotive_middle.png" alt="Bock Automotive Car"
-              class="relative z-10 w-64 sm:w-80 lg:w-96 h-auto max-w-full">
-          </div>
-        </div>
+<div class="relative flex justify-end order-1 lg:order-2">
+  <div class="relative w-full h-[500px] lg:h-[600px]">
+    <div class="absolute inset-0 bg-gradient-to-r from-red-600/30 
+                to-red-400/10 rounded-full blur-3xl scale-150"></div>
+    <img src="image/aev1.png" alt="Bock Automotive Car"
+         class="relative z-10 w-full h-full max-w-full
+                object-cover scale-110 translate-x-8
+                lg:scale-125 lg:translate-x-32 lg:-translate-y-4">
+  </div>
+</div>
+
       </div>
     </div>
   </section>
@@ -520,12 +537,12 @@
       </div>
 
       <!-- Gallery Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Gallery Item 1 -->
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img3.jpg" alt="Automotive Mission 1"
+            <img src="image/1. Braking Assembly.png" alt="Automotive Mission 1"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -551,7 +568,8 @@
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img1.jpg" alt="Automotive Mission 2"
+
+            <img src="image/2. Wheel Assembly.png" alt="Automotive Mission 2"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -577,7 +595,7 @@
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img4.jpg" alt="Automotive Mission 3"
+            <img src="image/3. Suspension Assembly.png" alt="Automotive Mission 3"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -603,7 +621,7 @@
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img3.jpg" alt="Automotive Mission 4"
+            <img src="image/4. Steering Assembly.png" alt="Automotive Mission 4"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -629,7 +647,7 @@
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img2.jpg" alt="Automotive Mission 5"
+            <img src="image/5. BMS.png" alt="Automotive Mission 5"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -655,7 +673,7 @@
         <div
           class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
           <div class="aspect-square overflow-hidden">
-            <img src="image/bock_automotive_img1.jpg" alt="Automotive Mission 6"
+            <img src="image/6. Chassis.png" alt="Automotive Mission 6"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -668,58 +686,6 @@
             <div class="mt-4 flex items-center gap-2">
               <span class="px-3 py-1 bg-accent/20 text-electric text-xs rounded-full">2024</span>
               <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs rounded-full">AI</span>
-            </div>
-          </div>
-          <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-              <i class="ri-eye-line text-white text-lg"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 7 -->
-        <div
-          class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-          <div class="aspect-square overflow-hidden">
-            <img src="image/img2.jpg" alt="Automotive Mission 7"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-            <h3 class="text-white font-bold text-lg mb-2">Launch Vehicle</h3>
-            <p class="text-gray-300 text-sm">Next-generation reusable rocket technology development.</p>
-            <div class="mt-4 flex items-center gap-2">
-              <span class="px-3 py-1 bg-accent/20 text-electric text-xs rounded-full">2025</span>
-              <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs rounded-full">Reusable</span>
-            </div>
-          </div>
-          <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-              <i class="ri-eye-line text-white text-lg"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gallery Item 8 -->
-        <div
-          class="gallery-item group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-dark/50 to-midnight/50 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-          <div class="aspect-square overflow-hidden">
-            <img src="image/img5.jpg" alt="Automotive Mission 8"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-            <h3 class="text-white font-bold text-lg mb-2">Orbital Station</h3>
-            <p class="text-gray-300 text-sm">Modular Automotive station components for extended missions.</p>
-            <div class="mt-4 flex items-center gap-2">
-              <span class="px-3 py-1 bg-accent/20 text-electric text-xs rounded-full">2025</span>
-              <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs rounded-full">Station</span>
             </div>
           </div>
           <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -760,12 +726,13 @@
       <!-- Products Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <!-- Product 1 -->
-        <a href="product-details.html?product=zeyon-x90" class="product-card group block">
+        <a href="product-details.html?product=automotive-ev1" class="product-card group block">
           <div class="product-inner glass-effect glow-3d rounded-2xl p-6 h-full">
             <div class="product-icon float-3d text-center mb-6">
               <div
                 class="w-16 h-16 mx-auto bg-gradient-to-r from-accent to-electric rounded-xl flex items-center justify-center mb-4">
-                <i class="ri-rocket-2-line text-2xl text-white"></i>
+                
+                     <i class="ri-roadster-fill text-2xl text-white"></i>
               </div>
               <div class="w-12 h-1 bg-gradient-to-r from-accent to-electric rounded-full mx-auto opacity-60"></div>
             </div>
@@ -782,20 +749,21 @@
           </div>
         </a>
 
-        <!-- Product 2: Inertia -->
-        <a href="product-details.html?product=inertia" class="product-card group block">
+        <!-- Product 2: automotive-spv1 -->
+        <a href="product-details.html?product=automotive-spv1" class="product-card group block">
           <div class="product-inner glass-effect glow-3d rounded-2xl p-6 h-full">
             <div class="product-icon float-3d text-center mb-6">
               <div
                 class="w-16 h-16 mx-auto bg-gradient-to-r from-secondary to-accent rounded-xl flex items-center justify-center mb-4">
-                <i class="ri-satellite-line text-2xl text-white"></i>
+                
+                     <iconify-icon icon="mdi:car-connected" class="text-2xl text-white"></iconify-icon>
               </div>
               <div class="w-12 h-1 bg-gradient-to-r from-secondary to-accent rounded-full mx-auto opacity-60"></div>
             </div>
             <div class="product-content">
               <h3 class="text-xl font-bold text-white mb-3 glow-text">Automotive SPV1</h3>
               <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                Automotive SPV is a breakthrough self-powered vehicle operating entirely on naturally available renewable energy. Built through advanced research and engineering, it represents a new era of sustainable mobility with continuous power generation and zero dependence on external charging infrastructure.
+                Automotive SPV1 is a breakthrough self-powered vehicle operating entirely on naturally available renewable energy. Built through advanced research and engineering, it represents a new era of sustainable mobility with continuous power generation and zero dependence on external charging infrastructure.
               </p>
               <div class="flex items-center justify-between mt-4">
                 <span class="text-electric text-xs font-medium">Self Powered Vehicle</span>
@@ -806,14 +774,13 @@
         </a>
 
         <!-- Product 3 -->
-        <a href="product-details.html?product=momentum" class="product-card group block">
+        <a href="product-details.html?product=bock-terafactory" class="product-card group block">
           <div class="product-inner glass-effect glow-3d rounded-2xl p-6 h-full">
             <div class="product-icon float-3d text-center mb-6">
-              <div
-                class="w-16 h-16 mx-auto bg-gradient-to-r from-electric to-azure rounded-xl flex items-center justify-center mb-4">
-                <i class="ri-Automotive-ship-line text-2xl text-white"></i>
+               <div class="w-16 h-16 mx-auto bg-gradient-to-r from-accent to-electric rounded-xl flex items-center justify-center mb-4">
+                <iconify-icon icon="mdi:factory" class="text-2xl text-white"></iconify-icon>
               </div>
-              <div class="w-12 h-1 bg-gradient-to-r from-electric to-azure rounded-full mx-auto opacity-60"></div>
+              <div class="w-12 h-1 bg-gradient-to-r from-accent to-electric rounded-full mx-auto opacity-60"></div>
             </div>
             <div class="product-content">
               <h3 class="text-xl font-bold text-white mb-3 glow-text">Bock Terafactory</h3>
@@ -831,7 +798,7 @@
   </section>
 
   <!--  Roadmap -->
-    <section id="work" class="relative py-12 sm:py-16 bg-gradient-to-br from-red-950 via-red-900 to-black overflow-hidden">
+    <section id="work" class="relative py-12 sm:py-16">
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-red-900/30"></div>
     <div class="mx-auto max-w-7xl px-4 md:px-6 relative z-10">
       <div class="text-center">
@@ -1012,174 +979,7 @@
 
       <div class="mt-6 sm:mt-8 h-px w-full bg-gradient-to-r from-transparent via-red-600/40 to-transparent"></div>
     </div>
-  </section>
-
-  <footer class="relative bg-gradient-to-b from-primary via-black to-primary text-white border-t border-white/10">
-    <div class="absolute inset-0 bg-[linear-gradient(135deg,#000000,30%,#0a0a0a,70%,#140000)] opacity-50"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        <div class="Automotive-y-6">
-          <div>
-            <h2 class="text-2xl font-bold text-secondary mb-2">
-              BOCK
-            </h2>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Innovating across multiple industries with cutting-edge technology and sustainable solutions for a better
-              tomorrow.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-white mb-6">Company</h3>
-            <nav class="space-y-4">
-              <a href="https://bockbharath.com/aboutus.html"
-                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">About
-                Us</a>
-              <a href="https://bockbharath.com/progress.html"
-                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Progress</a>
-              <a href="https://bockbharath.com/internship.html"
-                class="block text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200 text-sm">Join
-                Us</a>
-            </nav>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-6">Products</h3>
-          <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative
-              EV1</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Automative
-              SPV</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Bock
-              Foods</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">DroBock</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">ZipDroBock</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia
-              Nano</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Inertia
-              Mega</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Momentum</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Zeyon
-              X90</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">E-commerce</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BQP</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">BAVT</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Orventus</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Eira</a>
-            <a href="#"
-              class="text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition-colors duration-200">Typhronex</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-8">Businesses</h3>
-          <nav class="space-y-4 text-sm">
-            <a href="https://automotive.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Automotive
-            </a>
-            <a href="https://foods.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Foods
-            </a>
-            <a href="https://Automotive.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Automotive
-            </a>
-            <a href="https://ai.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock AI
-            </a>
-            <a href="https://health.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Health
-            </a>
-            <a href="https://chain.bockbharath.com"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Chain
-            </a>
-            <a href="#"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Institute
-            </a>
-            <a href="#"
-              class="flex items-center gap-3 text-gray-400 hover:underline underline-offset-4 decoration-red-600 decoration-2 transition group">
-              <div class="w-2 h-2 bg-red-500 rounded-full opacity-60 group-hover:opacity-100"></div>
-              Bock Force
-            </a>
-          </nav>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-8">Contact Us</h3>
-          <div class="space-y-6 mb-8 text-sm">
-            <div class="flex items-center gap-3">
-              <i class="ri-mail-line text-secondary text-lg"></i>
-              <a href="mailto:info@bockbharath.com"
-                class="text-gray-400 hover:text-white transition">info@bockbharath.com</a>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="ri-phone-line text-secondary text-lg"></i>
-              <a href="tel:+916360288456" class="text-gray-400 hover:text-white transition">+91 6360288456</a>
-            </div>
-          </div>
-          <div>
-            <h4 class="text-sm font-medium text-white mb-4">Follow Us</h4>
-            <div class="flex gap-4">
-              <a href="https://www.facebook.com/bockbharath/"
-                class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition group"><i
-                  class="ri-facebook-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.linkedin.com/company/bockbharth/"
-                class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition group"><i
-                  class="ri-linkedin-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://x.com/BockBH"
-                class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition group"><i
-                  class="ri-twitter-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.instagram.com/bockbharath"
-                class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-lg flex items-center justify-center transition-all group"><i
-                  class="ri-instagram-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-              <a href="https://www.youtube.com/@bockbharath"
-                class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition group"><i
-                  class="ri-youtube-fill text-gray-400 group-hover:text-white text-lg"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-white/20 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div class="text-center md:text-left">
-            <p class="text-gray-400 text-sm">© 2024–2025 BOCK™. All Rights Reserved.</p>
-            <p class="text-gray-500 text-xs mt-1">Octakaigon Bock Private Limited</p>
-          </div>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-            class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm">
-            <span class="text-gray-400">Back to top</span>
-            <i class="ri-arrow-up-line text-gray-400"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </footer>
+</section>  
 
   <script src="assets/js/main.js"></script>
   <script>
@@ -1273,9 +1073,19 @@
       window.addEventListener('scroll', updateCursor, { passive: true });
       window.addEventListener('resize', updateCursor);
       updateCursor();
-    })();
+    })();  
   </script>
-</body>
 
 
-</html>
+  <div id="footer"></div>
+    <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+    
+    </script>
+
+ </body>
+ </html>
